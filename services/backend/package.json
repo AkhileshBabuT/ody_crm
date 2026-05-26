@@ -32,20 +32,21 @@
     "clean": "rm -rf dist"
   },
   "dependencies": {
-    "hono": "^4.7.0",
     "@hono/zod-openapi": "^0.18.0",
+    "@odyssey/shared": "workspace:*",
     "drizzle-orm": "^0.44.0",
     "drizzle-zod": "^0.7.0",
+    "hono": "^4.7.0",
     "postgres": "^3.4.0",
-    "zod": "^3.24.0",
-    "@odyssey/shared": "workspace:*"
+    "zod": "^3.24.0"
   },
   "devDependencies": {
-    "wrangler": "^4.14.0",
     "@cloudflare/workers-types": "^4.20250521.0",
+    "@types/node": "^25.9.1",
     "drizzle-kit": "^0.31.0",
-    "vitest": "^3.1.0",
     "tsx": "^4.19.0",
-    "typescript": "^5.7.0"
+    "typescript": "^5.7.0",
+    "vitest": "^3.1.0",
+    "wrangler": "^4.14.0"
   }
 }
