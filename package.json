@@ -1,0 +1,37 @@
+{
+  "name": "odyssey",
+  "private": true,
+  "packageManager": "pnpm@10.14.0",
+  "engines": {
+    "node": ">=22",
+    "pnpm": ">=10"
+  },
+  "scripts": {
+    "dev:dashboard": "turbo run dev --filter=@odyssey/dashboard",
+    "dev:backend": "turbo run dev --filter=@odyssey/backend",
+    "dev": "turbo run dev --parallel",
+    "build": "turbo run build",
+    "gen:contract": "turbo run gen:contract",
+    "lint": "turbo run lint",
+    "typecheck": "turbo run typecheck",
+    "test": "turbo run test",
+    "db:migrate": "pnpm --filter @odyssey/backend run db:migrate",
+    "db:generate": "pnpm --filter @odyssey/backend run db:generate",
+    "db:seed": "pnpm --filter @odyssey/backend run db:seed",
+    "db:up": "docker compose up -d",
+    "db:down": "docker compose down",
+    "clean": "turbo run clean && rm -rf node_modules"
+  },
+  "devDependencies": {
+    "turbo": "^2.5.0",
+    "typescript": "^5.7.0"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "workerd",
+      "sharp",
+      "msgpackr-extract"
+    ]
+  }
+}

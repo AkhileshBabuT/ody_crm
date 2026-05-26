@@ -1,0 +1,50 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+build/
+.next/
+out/
+
+# Turborepo
+.turbo/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Expo
+.expo/
+web-build/
+ios/
+android/
+
+# Wrangler / Cloudflare
+.wrangler/
+.dev.vars
+
+# Drizzle
+drizzle/meta/
+
+# Docker
+pgdata/
+
+# IDE
+.vscode/settings.json
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Testing
+coverage/
+
+# Misc
+*.log
+*.tsbuildinfo

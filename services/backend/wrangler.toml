@@ -1,0 +1,7 @@
+name = "odyssey-backend"
+main = "src/index.ts"
+compatibility_date = "2025-05-01"
+compatibility_flags = ["nodejs_compat"]
+
+[vars]
+DATABASE_URL = "postgresql://odyssey:odyssey_dev@localhost:5432/odyssey_db"
