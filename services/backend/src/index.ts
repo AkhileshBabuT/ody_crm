@@ -1,16 +1,17 @@
 import { OpenAPIHono } from "@hono/zod-openapi";
 import { cors } from "hono/cors";
 import { logger } from "hono/logger";
-
-// ─── Types ───────────────────────────────────────────────────────────────────
-
-type Bindings = {
-  DATABASE_URL: string;
-};
+import { dbMiddleware, type Env } from "./lib/db";
+import { AppError, errorResponse } from "./lib/errors";
+import menuRoutes from "./routes/menu.routes";
+import ordersRoutes from "./routes/orders.routes";
+import customersRoutes from "./routes/customers.routes";
+import settingsRoutes from "./routes/settings.routes";
+import dashboardRoutes from "./routes/dashboard.routes";
 
 // ─── App ─────────────────────────────────────────────────────────────────────
 
-const app = new OpenAPIHono<{ Bindings: Bindings }>();
+const app = new OpenAPIHono<Env>();
 
 // ─── Middleware ───────────────────────────────────────────────────────────────
 
@@ -23,6 +24,34 @@ app.use(
     allowHeaders: ["Content-Type", "Authorization"],
   })
 );
+app.use("/api/*", dbMiddleware);
+
+// ─── Global Error Handler ───────────────────────────────────────────────────
+
+app.onError((err, c) => {
+  if (err instanceof AppError) {
+    return c.json(errorResponse(err), err.status as any);
+  }
+  console.error("Unhandled error:", err);
+  return c.json(
+    {
+      error: {
+        code: "INTERNAL_ERROR",
+        message: "An unexpected error occurred",
+        details: null,
+      },
+    },
+    500,
+  );
+});
+
+// ─── API Routes ─────────────────────────────────────────────────────────────
+
+app.route("/api/menu", menuRoutes);
+app.route("/api/orders", ordersRoutes);
+app.route("/api/customers", customersRoutes);
+app.route("/api/settings", settingsRoutes);
+app.route("/api/dashboard", dashboardRoutes);
 
 // ─── Health Check ────────────────────────────────────────────────────────────
 

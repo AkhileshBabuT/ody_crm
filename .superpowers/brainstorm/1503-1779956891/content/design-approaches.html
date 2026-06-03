@@ -1,0 +1,281 @@
+<h2>Three Design Approaches for Odyssey Dashboard</h2>
+<p class="subtitle">Each follows your design system (slate, emerald/sage, amber, Inter) — the difference is personality and density</p>
+
+<div class="options">
+  <div class="option" data-choice="a" onclick="toggleSelect(this)">
+    <div class="letter">A</div>
+    <div class="content">
+      <h3>Command Center</h3>
+      <p><strong>Dense, data-forward, ops-optimized.</strong> Inspired by tools like Linear and Grafana.</p>
+      <div class="mockup" style="margin-top:12px;">
+        <div class="mockup-body" style="background:#0f172a;color:#e2e8f0;font-family:Inter,sans-serif;padding:0;display:flex;min-height:280px;font-size:13px;">
+          <!-- Sidebar -->
+          <div style="width:56px;background:#1e293b;display:flex;flex-direction:column;align-items:center;padding:12px 0;gap:16px;border-right:1px solid #334155;">
+            <div style="width:32px;height:32px;border-radius:8px;background:#f59e0b;display:flex;align-items:center;justify-content:center;font-weight:700;color:#0f172a;font-size:14px;">O</div>
+            <div style="width:24px;height:2px;background:#334155;"></div>
+            <div style="width:20px;height:20px;border-radius:4px;background:#334155;"></div>
+            <div style="width:20px;height:20px;border-radius:4px;background:#334155;"></div>
+            <div style="width:20px;height:20px;border-radius:4px;background:#334155;"></div>
+            <div style="width:20px;height:20px;border-radius:4px;background:#334155;"></div>
+            <div style="width:20px;height:20px;border-radius:4px;background:#334155;"></div>
+          </div>
+          <!-- Main -->
+          <div style="flex:1;display:flex;flex-direction:column;">
+            <!-- Top bar -->
+            <div style="height:40px;background:#1e293b;border-bottom:1px solid #334155;display:flex;align-items:center;padding:0 16px;justify-content:space-between;">
+              <span style="font-weight:600;color:#f8fafc;">Dashboard</span>
+              <div style="display:flex;gap:8px;align-items:center;">
+                <div style="width:160px;height:24px;border-radius:4px;background:#0f172a;border:1px solid #334155;"></div>
+                <div style="width:24px;height:24px;border-radius:50%;background:#334155;"></div>
+              </div>
+            </div>
+            <!-- Content -->
+            <div style="padding:16px;display:flex;flex-direction:column;gap:12px;">
+              <!-- Stat cards row -->
+              <div style="display:flex;gap:8px;">
+                <div style="flex:1;background:#1e293b;border-radius:8px;padding:12px;border:1px solid #334155;">
+                  <div style="font-size:10px;color:#94a3b8;text-transform:uppercase;letter-spacing:0.5px;">Revenue Today</div>
+                  <div style="font-size:20px;font-weight:700;color:#f8fafc;margin-top:4px;">$2,847</div>
+                  <div style="font-size:10px;color:#10b981;margin-top:2px;">+12.3%</div>
+                </div>
+                <div style="flex:1;background:#1e293b;border-radius:8px;padding:12px;border:1px solid #334155;">
+                  <div style="font-size:10px;color:#94a3b8;text-transform:uppercase;letter-spacing:0.5px;">Orders</div>
+                  <div style="font-size:20px;font-weight:700;color:#f8fafc;margin-top:4px;">47</div>
+                  <div style="font-size:10px;color:#10b981;margin-top:2px;">+8 pending</div>
+                </div>
+                <div style="flex:1;background:#1e293b;border-radius:8px;padding:12px;border:1px solid #334155;">
+                  <div style="font-size:10px;color:#94a3b8;text-transform:uppercase;letter-spacing:0.5px;">Avg. Ticket</div>
+                  <div style="font-size:20px;font-weight:700;color:#f8fafc;margin-top:4px;">$60.57</div>
+                </div>
+                <div style="flex:1;background:#1e293b;border-radius:8px;padding:12px;border:1px solid #334155;">
+                  <div style="font-size:10px;color:#94a3b8;text-transform:uppercase;letter-spacing:0.5px;">Popular Item</div>
+                  <div style="font-size:20px;font-weight:700;color:#f8fafc;margin-top:4px;">Burger</div>
+                </div>
+              </div>
+              <!-- Chart + live feed -->
+              <div style="display:flex;gap:8px;flex:1;">
+                <div style="flex:2;background:#1e293b;border-radius:8px;padding:12px;border:1px solid #334155;">
+                  <div style="font-size:11px;font-weight:600;color:#94a3b8;margin-bottom:8px;">ORDERS OVER TIME</div>
+                  <div style="height:80px;display:flex;align-items:flex-end;gap:4px;padding-top:8px;">
+                    <div style="flex:1;background:#334155;border-radius:2px 2px 0 0;height:30%;"></div>
+                    <div style="flex:1;background:#334155;border-radius:2px 2px 0 0;height:50%;"></div>
+                    <div style="flex:1;background:#334155;border-radius:2px 2px 0 0;height:40%;"></div>
+                    <div style="flex:1;background:#334155;border-radius:2px 2px 0 0;height:70%;"></div>
+                    <div style="flex:1;background:#f59e0b;border-radius:2px 2px 0 0;height:90%;"></div>
+                    <div style="flex:1;background:#334155;border-radius:2px 2px 0 0;height:60%;"></div>
+                    <div style="flex:1;background:#334155;border-radius:2px 2px 0 0;height:45%;opacity:0.5;"></div>
+                  </div>
+                </div>
+                <div style="flex:1;background:#1e293b;border-radius:8px;padding:12px;border:1px solid #334155;">
+                  <div style="font-size:11px;font-weight:600;color:#94a3b8;margin-bottom:8px;">LIVE FEED</div>
+                  <div style="display:flex;flex-direction:column;gap:6px;font-size:11px;">
+                    <div style="display:flex;justify-content:space-between;"><span style="color:#10b981;">● Order #48</span><span style="color:#64748b;">ACCEPTED</span></div>
+                    <div style="display:flex;justify-content:space-between;"><span style="color:#f59e0b;">● Order #47</span><span style="color:#64748b;">PREPARING</span></div>
+                    <div style="display:flex;justify-content:space-between;"><span style="color:#94a3b8;">● Order #46</span><span style="color:#64748b;">READY</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pros-cons" style="margin-top:12px;">
+        <div class="pros"><h4>Pros</h4><ul><li>Maximum information density</li><li>Dark theme reduces eye strain for long shifts</li><li>Feels professional and fast</li></ul></div>
+        <div class="cons"><h4>Cons</h4><ul><li>Can feel overwhelming at first</li><li>Dark-only may not suit all environments</li></ul></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="option" data-choice="b" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content">
+      <h3>Clean Studio</h3>
+      <p><strong>Light, airy, generous whitespace.</strong> Inspired by Notion, Stripe Dashboard, and Linear's lighter mode.</p>
+      <div class="mockup" style="margin-top:12px;">
+        <div class="mockup-body" style="background:#f8fafc;color:#1e293b;font-family:Inter,sans-serif;padding:0;display:flex;min-height:280px;font-size:13px;">
+          <!-- Sidebar -->
+          <div style="width:200px;background:#ffffff;display:flex;flex-direction:column;padding:16px;gap:4px;border-right:1px solid #e2e8f0;">
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:16px;">
+              <div style="width:28px;height:28px;border-radius:8px;background:#f59e0b;display:flex;align-items:center;justify-content:center;font-weight:700;color:#fff;font-size:13px;">O</div>
+              <span style="font-weight:600;font-size:14px;color:#0f172a;">Odyssey</span>
+            </div>
+            <div style="padding:8px 12px;border-radius:8px;background:#f1f5f9;font-weight:500;color:#0f172a;font-size:13px;">Dashboard</div>
+            <div style="padding:8px 12px;border-radius:8px;color:#64748b;font-size:13px;">Orders</div>
+            <div style="padding:8px 12px;border-radius:8px;color:#64748b;font-size:13px;">Menu</div>
+            <div style="padding:8px 12px;border-radius:8px;color:#64748b;font-size:13px;">Customers</div>
+            <div style="padding:8px 12px;border-radius:8px;color:#64748b;font-size:13px;">Settings</div>
+          </div>
+          <!-- Main -->
+          <div style="flex:1;display:flex;flex-direction:column;">
+            <!-- Top bar -->
+            <div style="height:48px;background:#ffffff;border-bottom:1px solid #e2e8f0;display:flex;align-items:center;padding:0 24px;justify-content:space-between;">
+              <span style="font-weight:600;font-size:16px;color:#0f172a;">Dashboard</span>
+              <div style="display:flex;gap:12px;align-items:center;">
+                <div style="width:180px;height:32px;border-radius:8px;background:#f1f5f9;border:1px solid #e2e8f0;"></div>
+                <div style="width:32px;height:32px;border-radius:50%;background:#e2e8f0;"></div>
+              </div>
+            </div>
+            <!-- Content -->
+            <div style="padding:24px;display:flex;flex-direction:column;gap:16px;">
+              <!-- Stat cards -->
+              <div style="display:flex;gap:16px;">
+                <div style="flex:1;background:#ffffff;border-radius:12px;padding:20px;border:1px solid #e2e8f0;">
+                  <div style="font-size:12px;color:#64748b;font-weight:500;">Revenue Today</div>
+                  <div style="font-size:24px;font-weight:700;color:#0f172a;margin-top:8px;">$2,847</div>
+                  <div style="font-size:12px;color:#10b981;margin-top:4px;">+12.3% vs yesterday</div>
+                </div>
+                <div style="flex:1;background:#ffffff;border-radius:12px;padding:20px;border:1px solid #e2e8f0;">
+                  <div style="font-size:12px;color:#64748b;font-weight:500;">Orders</div>
+                  <div style="font-size:24px;font-weight:700;color:#0f172a;margin-top:8px;">47</div>
+                  <div style="display:flex;gap:4px;margin-top:4px;">
+                    <span style="font-size:10px;padding:2px 6px;border-radius:4px;background:#fef3c7;color:#92400e;">8 pending</span>
+                    <span style="font-size:10px;padding:2px 6px;border-radius:4px;background:#d1fae5;color:#065f46;">5 ready</span>
+                  </div>
+                </div>
+                <div style="flex:1;background:#ffffff;border-radius:12px;padding:20px;border:1px solid #e2e8f0;">
+                  <div style="font-size:12px;color:#64748b;font-weight:500;">Avg. Ticket</div>
+                  <div style="font-size:24px;font-weight:700;color:#0f172a;margin-top:8px;">$60.57</div>
+                </div>
+              </div>
+              <!-- Chart area -->
+              <div style="display:flex;gap:16px;">
+                <div style="flex:2;background:#ffffff;border-radius:12px;padding:20px;border:1px solid #e2e8f0;">
+                  <div style="font-size:13px;font-weight:600;color:#0f172a;margin-bottom:12px;">Orders Today</div>
+                  <div style="height:80px;display:flex;align-items:flex-end;gap:6px;">
+                    <div style="flex:1;background:#f1f5f9;border-radius:4px 4px 0 0;height:30%;"></div>
+                    <div style="flex:1;background:#f1f5f9;border-radius:4px 4px 0 0;height:50%;"></div>
+                    <div style="flex:1;background:#f1f5f9;border-radius:4px 4px 0 0;height:40%;"></div>
+                    <div style="flex:1;background:#f1f5f9;border-radius:4px 4px 0 0;height:70%;"></div>
+                    <div style="flex:1;background:#f59e0b;border-radius:4px 4px 0 0;height:90%;"></div>
+                    <div style="flex:1;background:#f1f5f9;border-radius:4px 4px 0 0;height:60%;"></div>
+                    <div style="flex:1;background:#f1f5f9;border-radius:4px 4px 0 0;height:30%;opacity:0.5;"></div>
+                  </div>
+                </div>
+                <div style="flex:1;background:#ffffff;border-radius:12px;padding:20px;border:1px solid #e2e8f0;">
+                  <div style="font-size:13px;font-weight:600;color:#0f172a;margin-bottom:12px;">Recent Orders</div>
+                  <div style="display:flex;flex-direction:column;gap:8px;font-size:12px;">
+                    <div style="display:flex;justify-content:space-between;align-items:center;"><span style="color:#0f172a;">#48 — Table 3</span><span style="padding:2px 8px;border-radius:4px;background:#d1fae5;color:#065f46;font-size:10px;">ACCEPTED</span></div>
+                    <div style="display:flex;justify-content:space-between;align-items:center;"><span style="color:#0f172a;">#47 — Takeout</span><span style="padding:2px 8px;border-radius:4px;background:#fef3c7;color:#92400e;font-size:10px;">PREPARING</span></div>
+                    <div style="display:flex;justify-content:space-between;align-items:center;"><span style="color:#0f172a;">#46 — Table 7</span><span style="padding:2px 8px;border-radius:4px;background:#e0f2fe;color:#075985;font-size:10px;">READY</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pros-cons" style="margin-top:12px;">
+        <div class="pros"><h4>Pros</h4><ul><li>Familiar, approachable, easy to learn</li><li>Works well in bright restaurant environments</li><li>Status badges are instantly readable</li></ul></div>
+        <div class="cons"><h4>Cons</h4><ul><li>Less dramatic / less "wow factor"</li><li>Light theme can wash out on cheap monitors</li></ul></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="option" data-choice="c" onclick="toggleSelect(this)">
+    <div class="letter">C</div>
+    <div class="content">
+      <h3>Hybrid Mode</h3>
+      <p><strong>Dark sidebar + light content area, with theme toggle.</strong> Best of both — focused nav, readable content. Inspired by Discord/Slack.</p>
+      <div class="mockup" style="margin-top:12px;">
+        <div class="mockup-body" style="background:#f8fafc;color:#1e293b;font-family:Inter,sans-serif;padding:0;display:flex;min-height:280px;font-size:13px;">
+          <!-- Dark sidebar -->
+          <div style="width:220px;background:#0f172a;display:flex;flex-direction:column;padding:16px;gap:4px;">
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:16px;">
+              <div style="width:28px;height:28px;border-radius:8px;background:#f59e0b;display:flex;align-items:center;justify-content:center;font-weight:700;color:#0f172a;font-size:13px;">O</div>
+              <span style="font-weight:600;font-size:14px;color:#f8fafc;">Odyssey</span>
+            </div>
+            <div style="padding:8px 12px;border-radius:8px;background:#1e293b;font-weight:500;color:#f8fafc;font-size:13px;">Dashboard</div>
+            <div style="padding:8px 12px;border-radius:8px;color:#94a3b8;font-size:13px;">Orders</div>
+            <div style="padding:8px 12px;border-radius:8px;color:#94a3b8;font-size:13px;">Menu</div>
+            <div style="padding:8px 12px;border-radius:8px;color:#94a3b8;font-size:13px;">Customers</div>
+            <div style="padding:8px 12px;border-radius:8px;color:#94a3b8;font-size:13px;">Settings</div>
+            <div style="margin-top:auto;padding:8px 12px;border-top:1px solid #1e293b;display:flex;align-items:center;gap:8px;color:#64748b;font-size:12px;">
+              <div style="width:24px;height:24px;border-radius:50%;background:#334155;"></div>
+              <span>Manager</span>
+            </div>
+          </div>
+          <!-- Light main -->
+          <div style="flex:1;display:flex;flex-direction:column;">
+            <!-- Top bar -->
+            <div style="height:48px;background:#ffffff;border-bottom:1px solid #e2e8f0;display:flex;align-items:center;padding:0 24px;justify-content:space-between;">
+              <div style="display:flex;align-items:center;gap:12px;">
+                <span style="font-weight:600;font-size:16px;color:#0f172a;">Dashboard</span>
+                <span style="font-size:11px;padding:3px 8px;border-radius:9999px;background:#d1fae5;color:#065f46;font-weight:500;">Live</span>
+              </div>
+              <div style="display:flex;gap:12px;align-items:center;">
+                <div style="width:180px;height:32px;border-radius:8px;background:#f1f5f9;border:1px solid #e2e8f0;"></div>
+                <div style="position:relative;width:32px;height:32px;border-radius:8px;background:#f1f5f9;display:flex;align-items:center;justify-content:center;">
+                  <div style="position:absolute;top:4px;right:4px;width:8px;height:8px;border-radius:50%;background:#ef4444;border:2px solid #fff;"></div>
+                </div>
+              </div>
+            </div>
+            <!-- Content -->
+            <div style="padding:24px;display:flex;flex-direction:column;gap:16px;background:#f8fafc;">
+              <!-- Stats -->
+              <div style="display:flex;gap:12px;">
+                <div style="flex:1;background:#ffffff;border-radius:12px;padding:16px;border:1px solid #e2e8f0;">
+                  <div style="font-size:11px;color:#64748b;font-weight:500;text-transform:uppercase;letter-spacing:0.5px;">Revenue</div>
+                  <div style="font-size:22px;font-weight:700;color:#0f172a;margin-top:6px;">$2,847</div>
+                  <div style="font-size:11px;color:#10b981;margin-top:4px;">↑ 12.3%</div>
+                </div>
+                <div style="flex:1;background:#ffffff;border-radius:12px;padding:16px;border:1px solid #e2e8f0;">
+                  <div style="font-size:11px;color:#64748b;font-weight:500;text-transform:uppercase;letter-spacing:0.5px;">Pending</div>
+                  <div style="font-size:22px;font-weight:700;color:#f59e0b;margin-top:6px;">8</div>
+                  <div style="font-size:11px;color:#64748b;margin-top:4px;">needs attention</div>
+                </div>
+                <div style="flex:1;background:#ffffff;border-radius:12px;padding:16px;border:1px solid #e2e8f0;">
+                  <div style="font-size:11px;color:#64748b;font-weight:500;text-transform:uppercase;letter-spacing:0.5px;">Completed</div>
+                  <div style="font-size:22px;font-weight:700;color:#10b981;margin-top:6px;">39</div>
+                  <div style="font-size:11px;color:#64748b;margin-top:4px;">today</div>
+                </div>
+                <div style="flex:1;background:#ffffff;border-radius:12px;padding:16px;border:1px solid #e2e8f0;">
+                  <div style="font-size:11px;color:#64748b;font-weight:500;text-transform:uppercase;letter-spacing:0.5px;">Top Item</div>
+                  <div style="font-size:16px;font-weight:700;color:#0f172a;margin-top:6px;">Burger</div>
+                  <div style="font-size:11px;color:#64748b;margin-top:4px;">24 sold</div>
+                </div>
+              </div>
+              <!-- Chart + feed -->
+              <div style="display:flex;gap:12px;">
+                <div style="flex:2;background:#ffffff;border-radius:12px;padding:16px;border:1px solid #e2e8f0;">
+                  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+                    <span style="font-size:13px;font-weight:600;color:#0f172a;">Order Volume</span>
+                    <div style="display:flex;gap:4px;">
+                      <span style="font-size:10px;padding:2px 8px;border-radius:4px;background:#f1f5f9;color:#64748b;">Today</span>
+                      <span style="font-size:10px;padding:2px 8px;border-radius:4px;background:#0f172a;color:#f8fafc;">Week</span>
+                    </div>
+                  </div>
+                  <div style="height:70px;display:flex;align-items:flex-end;gap:4px;">
+                    <div style="flex:1;background:#e2e8f0;border-radius:3px 3px 0 0;height:35%;"></div>
+                    <div style="flex:1;background:#e2e8f0;border-radius:3px 3px 0 0;height:55%;"></div>
+                    <div style="flex:1;background:#e2e8f0;border-radius:3px 3px 0 0;height:45%;"></div>
+                    <div style="flex:1;background:#e2e8f0;border-radius:3px 3px 0 0;height:72%;"></div>
+                    <div style="flex:1;background:#f59e0b;border-radius:3px 3px 0 0;height:92%;"></div>
+                    <div style="flex:1;background:#e2e8f0;border-radius:3px 3px 0 0;height:55%;"></div>
+                    <div style="flex:1;background:#e2e8f0;border-radius:3px 3px 0 0;height:38%;opacity:0.5;"></div>
+                  </div>
+                </div>
+                <div style="flex:1;background:#ffffff;border-radius:12px;padding:16px;border:1px solid #e2e8f0;">
+                  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+                    <span style="font-size:13px;font-weight:600;color:#0f172a;">Live Orders</span>
+                    <span style="width:8px;height:8px;border-radius:50%;background:#10b981;display:inline-block;animation:pulse 2s infinite;"></span>
+                  </div>
+                  <div style="display:flex;flex-direction:column;gap:8px;font-size:12px;">
+                    <div style="display:flex;justify-content:space-between;align-items:center;padding:6px 8px;border-radius:6px;background:#f8fafc;"><span style="color:#0f172a;font-weight:500;">#48</span><span style="padding:2px 8px;border-radius:4px;background:#d1fae5;color:#065f46;font-size:10px;font-weight:500;">ACCEPTED</span></div>
+                    <div style="display:flex;justify-content:space-between;align-items:center;padding:6px 8px;border-radius:6px;background:#f8fafc;"><span style="color:#0f172a;font-weight:500;">#47</span><span style="padding:2px 8px;border-radius:4px;background:#fef3c7;color:#92400e;font-size:10px;font-weight:500;">PREPARING</span></div>
+                    <div style="display:flex;justify-content:space-between;align-items:center;padding:6px 8px;border-radius:6px;background:#f8fafc;"><span style="color:#0f172a;font-weight:500;">#46</span><span style="padding:2px 8px;border-radius:4px;background:#e0f2fe;color:#075985;font-size:10px;font-weight:500;">READY</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pros-cons" style="margin-top:12px;">
+        <div class="pros"><h4>Pros</h4><ul><li>Dark sidebar anchors navigation, light content is easy to read</li><li>Live badge + notification dot feel modern</li><li>Natural theme toggle path (sidebar stays dark, content can flip)</li></ul></div>
+        <div class="cons"><h4>Cons</h4><ul><li>Two-tone requires careful contrast management</li><li>Slightly more implementation complexity</li></ul></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<p style="margin-top:16px;color:#94a3b8;font-size:13px;"><strong>My recommendation:</strong> Option C (Hybrid Mode). It gives you the polished, professional feel of a dark sidebar for focused navigation while keeping the content area light and scannable — ideal for a CRM that all roles use throughout the day. The "Live" badge and notification system also set up nicely for the real-time features you want.</p>

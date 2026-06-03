@@ -20,8 +20,11 @@
       "dependsOn": ["build"]
     },
     "gen:contract": {
-      "dependsOn": ["@odyssey/backend#build"],
-      "outputs": ["packages/api-client/src/generated/**"]
+      "dependsOn": ["@odyssey/backend#gen:contract"],
+      "outputs": ["src/generated/**"]
+    },
+    "@odyssey/backend#gen:contract": {
+      "outputs": ["openapi.json"]
     },
     "db:migrate": {
       "cache": false
